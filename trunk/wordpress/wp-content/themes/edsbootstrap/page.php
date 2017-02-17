@@ -15,7 +15,7 @@
 get_header(); ?>
 
 <!-- Section: Page Header -->
-<section class="section-page-header page">
+<section class="section-page-header page hide">
     <div class="container">
         <div class="row">
 
@@ -34,13 +34,14 @@ get_header(); ?>
 <!-- /Section: Page Header -->
 <!-- Main -->
 <main class="main-container">
-    <div class="container">
+    <div class="container-fluid">
     	<div class="row">
-     	<?php if( get_theme_mod( 'edsbootstrap_show_page_sidebar','0') == 1 ):?> 
+     	<?php if( get_theme_mod( 'edsbootstrap_show_page_sidebar','0') != 1 ):?> 
 		<div class="col-md-9">
         <?php else: ?>
 		<div class="col-md-12">
 		<?php endif;?>
+            <div class="row">
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -53,8 +54,9 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
+            </div>
 		</div>
-        <?php if( get_theme_mod( 'edsbootstrap_show_page_sidebar','0') == 1 ):?> 
+        <?php if( get_theme_mod( 'edsbootstrap_show_page_sidebar','0') != 1 ):?> 
         <!-- Blog Sidebar -->
         <div class="col-md-3">
         	<?php echo get_sidebar();?>

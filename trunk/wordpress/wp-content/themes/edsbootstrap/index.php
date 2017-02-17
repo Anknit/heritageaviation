@@ -45,7 +45,7 @@ $edsbootstrap_options = get_theme_mod( 'edsbootstrap_theme_options' );
 
 <!-- Main -->
 <main class="main-container">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <!-- Blog Content -->
             <div class="col-md-9">
