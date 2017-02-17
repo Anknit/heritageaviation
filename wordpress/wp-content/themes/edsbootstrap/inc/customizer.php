@@ -222,7 +222,7 @@ function edsbootstrap_customize_register( $wp_customize ) {
 	Show Page Side Bar
 	*/
 	$wp_customize->add_setting('edsbootstrap_show_page_sidebar', array(
-        'default'    => 0,
+        'default'    => 1,
         'type'       => 'theme_mod',
         'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'edsbootstrap_sanitize_checkbox'
